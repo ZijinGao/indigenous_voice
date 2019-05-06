@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>game</title>
+        <script src="libraries/p5.js" type="text/javascript"></script>
+        <script src="libraries/p5.dom.js" type="text/javascript"></script>
+        <script src="libraries/p5.sound.js" type="text/javascript"></script>
+
+        <script src="game2.js" type="text/javascript"></script>
+
+        <style>
+        body{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        #infoToQuiz{
+            background-color: black;
+            position: fixed;
+            width: 20px;
+            height:600px;
+            margin-left: 400px;
+            margin-top: 100px;
+            z-index: 1;
+            opacity:0;
+        }
+
+        #backButton{
+            position:fixed;
+            z-index: 1;
+            display: none;
+
+            width: 150px;
+            height:80px;
+
+            font-size: 2.5em;
+            margin-left: 37%;
+            margin-top: 10%;
+            border-radius: 20px;
+        }
+
+        .buttons{
+            position:fixed;
+        }
+        #choiceA{
+            margin-top: 330px;
+            margin-left: 150px;
+            width: 700px;
+            height: 70px;
+            display: none;
+            opacity: 0;
+        }
+        #choiceB{
+            margin-top: 420px;
+            margin-left: 150px;
+            width: 700px;
+            height: 70px;
+            display: none;
+            opacity: 0;
+        }
+        #choiceC{
+            margin-top: 520px;
+            margin-left: 150px;
+            width: 700px;
+            height: 70px;
+            display: none;
+            opacity: 0;
+        }
+        #backToQuiz{
+            width: 100px;
+            height: 50px;
+            background-color: grey;
+            display:none;
+            margin-top: 50px;
+            margin-left: 800px;
+            border: none;
+        }
+        </style>
+    </head>
+    <body>
+
+         <div id="container">
+            <div id="infoToQuiz" onclick="showQuiz()">
+            </div>
+
+            <button id="choiceA" class="buttons" onclick="showOutcome(1)">
+            </button>
+
+            <button id="choiceB" class="buttons" onclick="showOutcome(2)">
+            </button>
+
+            <button id="choiceC" class="buttons" onclick="showOutcome(3)">
+            </button>
+
+            <button id="backToQuiz" class="buttons" onclick="backToQuiz()"></button>
+
+            <button id="backButton" class="buttons" onclick="back()" value="back">Back
+            </button>
+         </div>
+    </body>
+</html>
